@@ -16,7 +16,7 @@ type DefaultConfluence struct {
 	Confluence
 }
 
-func NewConfluenceClient(baseURL string, username, password string) (Confluence, error) {
+func NewClient(baseURL string, username, password string) (Confluence, error) {
 	if _, err := url.Parse(baseURL); err != nil {
 		return DefaultConfluence{}, err
 	}
